@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Raniya & Safeer | Nikah Invitation</title>
+    <title>Adilsha &amp; Salma | Nikah Invitation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quintessential&family=Cinzel:wght@400;600;700&family=IM+Fell+English:ital@0;1&family=Great+Vibes&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -13,11 +16,11 @@
           <span class="gold-sprig hero-sprig left" aria-hidden="true"></span>
           <span class="gold-sprig hero-sprig right" aria-hidden="true"></span>
           <div class="hero-copy reveal">
-            <p class="bismillah" lang="ar" dir="rtl">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
-            <h1>Raniya &amp; Safeer</h1>
+            <p class="bismillah" lang="ar" dir="rtl">بِسْمِ ٱللّٰهِ ٱلرَّحْمٰنِ ٱلرَّحِيمِ</p>
+            <h1>Adilsha Wafy  &amp; <br/> Salma Wafiyya </h1>
             <div class="ornament" aria-hidden="true"><span></span></div>
 
-            <p class="hero-date"><i data-icon="calendar"></i><span>17th August 2026</span></p>
+            <p class="hero-date"><i data-icon="calendar"></i><span>30th May 2026</span></p>
           </div>
         </section>
 
@@ -31,17 +34,30 @@
             the most Gracious and the most Merciful
           </p>
           <div class="divider" aria-hidden="true"></div>
-          <h2>Mr. Name &amp; Mrs. Name</h2>
+          <h2 class="couple-names-heading">Adilsha Wafy &amp; Salma Wafiyya</h2>
           <p class="place-line">Your Place<br />Details</p>
           <p class="invite-copy">
             We cordially invite your esteemed presence &amp; blessings with family
-            on the auspicious occasion of the marriage of our daughter
-            <strong>Raniya</strong> with <strong>Safeer</strong>
+            on the auspicious occasion of the marriage of our son
+            <strong>Adilsha Wafy</strong> with <strong>Salma Wafiyya</strong>
           </p>
           <p class="family-line">
             S/o. Mrs. &amp; Mr. Name<br />
             Place
           </p>
+
+          <div class="divider" aria-hidden="true"></div>
+
+          <!-- Countdown after the invitation text -->
+          <div class="inline-countdown" aria-label="Countdown to the Nikah">
+            <p class="countdown-label">Counting down to the big day</p>
+            <div class="countdown-grid">
+              <article><strong id="days">00</strong><span>Days</span></article>
+              <article><strong id="hours">00</strong><span>Hours</span></article>
+              <article><strong id="minutes">00</strong><span>Minutes</span></article>
+              <article><strong id="seconds">00</strong><span>Seconds</span></article>
+            </div>
+          </div>
         </section>
 
         <section class="details-card reveal" id="details">
@@ -57,7 +73,7 @@
             <div class="detail-item">
               <i data-icon="calendar"></i>
               <h3>Date</h3>
-              <p>17th August 2026</p>
+              <p>30th May 2026</p>
             </div>
             <div class="detail-item">
               <i data-icon="clock"></i>
@@ -68,6 +84,13 @@
               <i data-icon="pin"></i>
               <h3>Venue</h3>
               <p>Grand Palace Auditorium,<br />Venue Place</p>
+              <p class="venue-roads">
+                Alathiyoor – Kodakkal Rd<br />
+                Alathiyoor–Purathur Rd
+              </p>
+              <a class="map-link" href="https://maps.app.goo.gl/3ECZrUYcECvgiYjS8" target="_blank" rel="noopener noreferrer" aria-label="Open venue in Google Maps">
+                <i data-icon="map"></i> Get Directions
+              </a>
             </div>
           </div>
 
@@ -93,7 +116,14 @@
             <h2>Grand Palace Auditorium</h2>
             <div class="divider" aria-hidden="true"></div>
             <p class="venue-place">Venue Place</p>
+            <p class="venue-roads venue-roads--rsvp">
+              Alathiyoor – Kodakkal Rd / Alathiyoor–Purathur Rd<br />
+              Ponnani – Tirur Rd / Tirur – Chamravattom Rd
+            </p>
             <p class="function-time">Function Time: 10:30 AM onwards</p>
+            <a class="map-btn" href="https://maps.app.goo.gl/3ECZrUYcECvgiYjS8" target="_blank" rel="noopener noreferrer" aria-label="Open venue location in Google Maps">
+              <i data-icon="map"></i> View on Google Maps
+            </a>
           </div>
 
           <figure class="venue-frame">
@@ -119,6 +149,28 @@
         <p>And my success is not but through Allah</p>
         <span>(Qur’an 11:88)</span>
       </footer>
+    </div>
+
+    <!-- RSVP: Attending dialog -->
+    <div class="rsvp-dialog-overlay" id="dialog-yes" role="dialog" aria-modal="true" aria-labelledby="dialog-yes-title">
+      <div class="rsvp-dialog">
+        <div class="rsvp-dialog-icon">💍</div>
+        <h3 id="dialog-yes-title">JazakAllah Khair!</h3>
+        <p>We're so happy you'll be joining us on this blessed day. Your presence and duas mean the world to us.</p>
+        <p class="rsvp-dialog-date">30th May 2026 · 10:30 AM</p>
+        <button class="rsvp-dialog-close" data-close="dialog-yes" aria-label="Close">Done ✓</button>
+      </div>
+    </div>
+
+    <!-- RSVP: Unable to attend dialog -->
+    <div class="rsvp-dialog-overlay" id="dialog-no" role="dialog" aria-modal="true" aria-labelledby="dialog-no-title">
+      <div class="rsvp-dialog">
+        <div class="rsvp-dialog-icon">🤲</div>
+        <h3 id="dialog-no-title">We'll Miss You</h3>
+        <p>We completely understand. Please keep us in your duas on this special day — your blessings mean everything.</p>
+        <p class="rsvp-dialog-date">May Allah bless you always 🌿</p>
+        <button class="rsvp-dialog-close" data-close="dialog-no" aria-label="Close">Close</button>
+      </div>
     </div>
 
     <script src="./script.js"></script>
